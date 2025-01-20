@@ -20,9 +20,9 @@ app.add_middleware(
 
 
 
-@app.get("/")
-async def root():
-    return {"message": "Welcome to the CV upload and processing API!"}
+# @app.get("/")
+# async def root():
+#     return {"message": "Welcome to the CV upload and processing API!"}
 
 
 @app.post('/api/upload_cv')
@@ -56,7 +56,7 @@ async def upload_cv(file: UploadFile = File(...)):
             status_code=500, detail=f"Error processing file: {str(e)}")
 
 
-@app.get('/api/get_details')
+@app.get('/')
 async def get_details():
     try:
         # Get all data from Excel using the utility function
