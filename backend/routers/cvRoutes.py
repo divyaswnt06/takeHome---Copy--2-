@@ -10,13 +10,7 @@ router = APIRouter(
     prefix='/api',
     tags=['initial']
 )
-router.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"], 
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+
 
 
 @router.post('/upload_cv')
