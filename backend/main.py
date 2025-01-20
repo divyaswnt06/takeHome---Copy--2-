@@ -6,7 +6,6 @@ from fastapi.responses import JSONResponse
 from fastapi import APIRouter, File, UploadFile, HTTPException
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from routers.cvRoutes import router as upload_cv_router
 
 app = FastAPI()
 
@@ -19,7 +18,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(upload_cv_router)
 
 
 @app.get("/")
