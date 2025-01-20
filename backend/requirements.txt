@@ -1,7 +1,10 @@
 fastapi
 uvicorn[standard]
+pydantic
+python-multipart
 requests
 aiohttp
+jose
 cloudflare
 boto3 
 pandas
